@@ -20,4 +20,30 @@ public class StringListSearchTest {
         actualOutput = StringListSearch.unorderedSearch(inputItems, inputTerm);
         assertEquals(expectedOutput, actualOutput);
     }
+
+    @Test 
+    public void testOrderedLinearSearch(){
+        ArrayList<String> inputItems;
+        String inputTerm;
+        int expectedOutput;
+        int actualOutput;
+
+        inputItems = new ArrayList<>(Arrays.asList("a", "b", "c", "d", "e", "f", "g"));
+        inputTerm = "z";
+        expectedOutput = -1;
+        actualOutput = StringListSearch.orderedLinearSearch(inputItems, inputTerm);
+    }
+
+    @Test 
+    public void testOrderedBinarySearch(){
+        ArrayList<String> inputItems;
+        String inputTerm;
+        int expectedOutput;
+        int actualOutput;
+
+        inputItems = new ArrayList<>(Arrays.asList("a", "b", "c", "d", "e", "f", "g"));
+        inputTerm = "z";
+        expectedOutput = -1;
+        actualOutput = StringListSearch.orderedBinarySearch(inputItems, inputTerm);
+    }
 }
